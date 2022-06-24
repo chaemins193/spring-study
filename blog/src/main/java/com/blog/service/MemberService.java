@@ -6,11 +6,15 @@ import java.util.Optional;
 
 import com.blog.domain.Member;
 import com.blog.repository.MemberRepository;
-import com.blog.repository.MemoryMemberRepository;
 
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    //DI(Dependence Injection)
+    public MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    }
 
     // 회원 가입
     public long join(Member member) {
