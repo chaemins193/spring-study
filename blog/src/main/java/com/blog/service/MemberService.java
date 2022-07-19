@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.blog.domain.Member;
 import com.blog.repository.MemberRepository;
 
-@Service
+
 public class MemberService {
 
     private final MemberRepository memberRepository;
